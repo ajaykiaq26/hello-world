@@ -5,15 +5,15 @@ pipeline {
 
     stages {
 
-        stage('Hello World') {
+        stage('Hello') {
             steps {
-                echo 'Hello World from Jenkins Pipeline!'
+                echo 'Hello World'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Starting Build...'
+                echo 'Building the application...'
                 sh 'echo "Build completed successfully - Poll SCM Test"'
             }
         }
@@ -42,7 +42,6 @@ pipeline {
         failure {
             echo 'Pipeline failed!'
         }
-    }
+   }
 }
-
 
